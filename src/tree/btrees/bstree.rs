@@ -213,19 +213,4 @@ mod test {
         assert!(btree.search(20));
     }
 
-
-
-    // #[test]
-    // fn iterate() {
-    //     let mut btree : BTree<u32> = BTree::new_empty();
-    //     btree.add(10);
-    //     btree.add(20);
-    //     btree.add(15);
-    //     btree.add(5);
-    //     println!("{:#?}", btree);
-    //     let mut iter = btree.into_iter();
-    //     while let Some(nb) = iter.next() {
-    //         println!("{}", nb);
-    //     }
-    // }
 }
