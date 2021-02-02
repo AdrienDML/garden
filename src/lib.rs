@@ -1,17 +1,13 @@
 pub mod tree;
-pub mod rope;
 
-mod nodes;
 
-pub(crate) type Link<T> = Option<Box<T>>;
-pub(crate) trait TreeElem {}
+// an alias to aleviate code verbosity on Nodes links
+pub(crate) type Link<N> = Option<Box<N>>;
+
+// A trait that  should be implemented for all Tree components.
+pub trait TreeElem {}
 
 impl TreeElem for () {}
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+
+
