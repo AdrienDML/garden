@@ -167,50 +167,50 @@ mod test {
 
     #[test]
     fn addsearch() {
-        let mut btree : BSTree<u32> = BSTree::new_empty();
-        btree.add(10);
-        btree.add(20);
-        btree.add(15);
-        btree.add(5);
-        assert!(btree.search(10));
-        assert!(btree.search(5));
-        assert!(!btree.search(60));
+        let mut bstree : BSTree<u32> = BSTree::new_empty();
+        bstree.add(10);
+        bstree.add(20);
+        bstree.add(15);
+        bstree.add(5);
+        assert!(bstree.search(10));
+        assert!(bstree.search(5));
+        assert!(!bstree.search(60));
     }
 
     #[test]
     fn popminmax() {
-        let mut btree : BSTree<u32> = BSTree::new_empty();
-        btree.add(10);
-        btree.add(20);
-        btree.add(15);
-        btree.add(5);
-        assert_eq!(btree.pop_min().unwrap().1, 5);
-        assert!(!btree.search(5));
-        assert_eq!(btree.pop_max().unwrap().1, 20);
-        assert!(!btree.search(20));
+        let mut bstree : BSTree<u32> = BSTree::new_empty();
+        bstree.add(10);
+        bstree.add(20);
+        bstree.add(15);
+        bstree.add(5);
+        assert_eq!(bstree.pop_min().unwrap().1, 5);
+        assert!(!bstree.search(5));
+        assert_eq!(bstree.pop_max().unwrap().1, 20);
+        assert!(!bstree.search(20));
     }
 
     #[test]
     fn delete() {
-        let mut btree : BSTree<u32> = BSTree::new_empty();
-        btree.add(12);
-        btree.add(5);
-        btree.add(3);
-        btree.add(1);
-        btree.add(7);
-        btree.add(9);
-        btree.add(8);
-        btree.add(9);
-        btree.add(11);
-        btree.add(15);
-        btree.add(13);
-        btree.add(14);
-        btree.add(17);
-        btree.add(20);
-        btree.add(18);
-        btree.delete(15);
-        assert!(!btree.search(15));
-        assert!(btree.search(20));
+        let mut bstree : BSTree<u32> = BSTree::new_empty();
+        bstree.add(12);
+        bstree.add(5);
+        bstree.add(3);
+        bstree.add(1);
+        bstree.add(7);
+        bstree.add(9);
+        bstree.add(8);
+        bstree.add(9);
+        bstree.add(11);
+        bstree.add(15);
+        bstree.add(13);
+        bstree.add(14);
+        bstree.add(17);
+        bstree.add(20);
+        bstree.add(18);
+        bstree.delete(15);
+        assert!(!bstree.search(15));
+        assert!(bstree.search(20));
     }
 
 }
